@@ -3,7 +3,7 @@
 PFP Generator is a simple web application that allows users to create custom profile pictures by selecting different layers and traits. Users can upload images for body and trait layers, and then mix and match the layers to generate their desired profile pictures.
 
 <div style="display:block;margin:auto;height:80%;width:60%">
-  <img src="screenshot1.png">
+  <img src="screenshot.png">
 </div>
 
 ## Features
