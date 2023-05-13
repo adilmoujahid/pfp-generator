@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    overflow-y: auto; 
+    max-height: 100vh; 
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.controls label {
+    margin: 0;
+}
+
+.canvas-container {
+    position: relative;
+    display: inline-block;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    image-rendering: pixelated;
+    
+}
+
+canvas {
+    box-sizing: content-box;
+  }
+
+.asset-container {
+    display: inline-flex;
+    align-items: center;
+    margin: 4px 0;
+}
+
+
+.saved-image {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    border: 5px solid #555;
+}
+
+.asset-checkbox {
+    margin-right: 4px;
+}
+
+#exportAssets {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+

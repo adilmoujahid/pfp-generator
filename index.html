@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Select PFP Layers</h2>
+            <!-- Upload Backgrounds -->
+            <div class="file-input-container">
+                <label for="background-input">Upload Backgrounds:</label>
+                <input type="file" id="background-input" accept=".png, .jpg, .jpeg" multiple>
+            </div>
+            <!-- Body Dropdown -->
+            <div class="body-dropdown-container">
+                <label for="background-dropdown">Select Background:</label>
+                <select id="background-dropdown"></select>
+            </div>
+            <br>
+            <br>
+            <!-- Upload Bodies -->
+            <div class="file-input-container">
+                <label for="body-input">Upload Bodies:</label>
+                <input type="file" id="body-input" accept=".png, .jpg, .jpeg" multiple>
+            </div>
+            <!-- Body Dropdown -->
+            <div class="body-dropdown-container">
+                <label for="body-dropdown">Select Body:</label>
+                <select id="body-dropdown"></select>
+            </div>
+            <br>
+            <br>
+            <!-- Upload Traits -->
+            <div class="trait-upload-container">
+                <input type="file" id="trait-input" accept=".png, .jpg, .jpeg" multiple>
+                <br>
+                <label for="trait-name">Trait Name:</label>
+                <br>
+                <input type="text" id="trait-name">
+                <button id="upload-trait">Upload Trait</button>
+                
+                <!-- <label for="trait-input">Upload Trait Images:</label> -->
+            </div>
+            <div id="trait-dropdown-container">
+                <!-- Trait dropdowns will be generated here -->
+            </div>
+            <br>
+            <h2>Colors</h2>
+            <div id="colorsList"></div>
+            <br>
+            <h2>Saved PFPs</h2>
+            <div id="assetsList"></div>
+            <button id="exportAssets">Export</button>
+
+
+        </div>
+        <div class="main">
+            <div class="controls">
+                <label for="gridSize">Grid Size:</label>
+                <select id="gridSize">
+                    <option value="8">8</option>
+                    <option value="12" selected>12</option>
+                    <option value="16">16</option>
+                    <option value="20">20</option>
+                    <option value="24">24</option>
+                </select>
+                <label for="canvasSize">Canvas Size:</label>
+                <select id="canvasSize">
+                    <option value="16">16x16</option>
+                    <option value="24">24x24</option>
+                    <option value="32">32x32</option>
+                    <option value="42">42x42</option>
+                    <option value="64">64x64</option>
+                </select>
+                <label for="colorPicker">Color:</label>
+                <input type="color" id="colorPicker" value="#000000">
+                <label for="toggleTransparency">Erase Pixel</label>
+                <input type="checkbox" id="toggleTransparency" />
+            </div>
+            <div class="controls">
+                <button id="clearCanvas">Clear</button>
+                <button id="toggleGrid">Toggle Grid</button>
+                <button id="generatePFP">Generate PFP</button>
+                <button id="saveAsset">Save Image</button>
+            </div>
+            <div class="canvas-container">
+                <canvas id="gridCanvas"></canvas>
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
